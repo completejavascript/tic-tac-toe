@@ -1,0 +1,95 @@
+.header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #fed766;
+}
+
+.header>h1{
+  font-size: 3rem;
+}
+
+.header>ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.header>ul>li {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  margin-left: -1px;
+  width: 160px;
+}
+
+.header>ul>li:first-child {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.header>ul>li:last-child {
+  border-radius: 0px 3px 3px 0px;
+}
+
+.header>ul>li:not(.active):hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header>ul>li.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.header>ul>li.active:hover {
+  cursor: default;
+}
+
+.header>div>button {
+  background-color: #2ab7ca;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  margin: 0 auto;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 15px 0px;
+}
+
+.header>div>button:hover {
+  cursor: pointer;
+}
+
+.header>div>button:active {
+  box-shadow: none;
+}
+
+@media (max-width: 575px) {
+  .header {
+    padding: 20px 0;
+  }
+  .header>h1{
+    font-size: 2rem;
+  }
+  .header>ul>li {
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header {
+    padding: 5px 0 25px;
+  }
+  .header>h1{
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+  .header>ul>li {
+    padding: 5px;
+  }
+  .header>div>button{
+    padding: 8px 12px;
+  }
+}

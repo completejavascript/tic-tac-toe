@@ -1,0 +1,195 @@
+.main {
+  padding: 0px 150px 30px 150px;
+  background-color: #000;
+}
+
+.main>.info {
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1.5rem;
+}
+
+/* Draw winning line*/
+
+.main>.board {
+  position: relative;
+}
+
+.main>.board::after {
+  content: '';
+  position: absolute;
+  background-color: #2ab7ca;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+
+/* Horizonal Lines */
+
+.main>.board.h::after {
+  width: 0%;
+  height: 3px;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.main>.board.h.full::after {
+  width: 100%;
+}
+
+.main>.board.h0::after {
+  top: calc(100% / 6);
+}
+
+.main>.board.h1::after {
+  top: 50%;
+}
+
+.main>.board.h2::after {
+  top: calc(5 * 100% / 6);
+}
+
+/* Vertical Lines */
+
+.main>.board.v::after {
+  height: 0%;
+  width: 3px;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.main>.board.v.full::after {
+  height: 100%;
+}
+
+.main>.board.v0::after {
+  left: calc(100% / 6);
+}
+
+.main>.board.v1::after {
+  left: 50%;
+}
+
+.main>.board.v2::after {
+  left: calc(5 * 100% / 6);
+}
+
+/* Diagonal Lines */
+
+.main>.board.d0::after {
+  height: 0%;
+  width: 3px;
+  left: 0;
+  top: 0;
+  transform: rotateZ(-45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+  -webkit-transition: height 0.7s;
+  -moz-transition: height 0.7s;
+  -o-transition: height 0.7s;
+}
+
+.main>.board.d0.full::after {
+  height: 140%;
+}
+
+.main>.board.d1::after {
+  height: 0%;
+  width: 3px;
+  right: 0;
+  top: 0;
+  transform: rotateZ(45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+  -webkit-transition: height 0.7s;
+  -moz-transition: height 0.7s;
+  -o-transition: height 0.7s;
+}
+
+.main>.board.d1.full::after {
+  height: 140%;
+}
+
+/* Draw winning line*/
+
+.main>.board>.board-row {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.main>.board>.board-row>.cell {
+  flex: 1;
+  padding-top: calc(100% / 6 - 2.9rem);
+  padding-bottom: calc(100% / 6 - 2.9rem);
+  font-size: 5rem;
+  line-height: 5.7rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #fff;
+  margin-left: -2px;
+  margin-top: -2px;
+}
+
+.main>.board>.board-row>.cell.done {
+  color: #fff;
+}
+
+.main>.board.full>.board-row>.cell {
+  cursor: default;
+}
+
+.main>.board:not(.full)>.board-row>.cell:not(.done):hover {
+  cursor: pointer;
+  background-color: #111;
+  color: #111;
+}
+
+.main>.board>.board-row>.cell.cell-0,
+.main>.board>.board-row>.cell.cell-1,
+.main>.board>.board-row>.cell.cell-2 {
+  border-top: none;
+}
+
+.main>.board>.board-row>.cell.cell-0,
+.main>.board>.board-row>.cell.cell-3,
+.main>.board>.board-row>.cell.cell-6 {
+  border-left: none;
+}
+
+.main>.board>.board-row>.cell.cell-6,
+.main>.board>.board-row>.cell.cell-7,
+.main>.board>.board-row>.cell.cell-8 {
+  border-bottom: none;
+}
+
+.main>.board>.board-row>.cell.cell-2,
+.main>.board>.board-row>.cell.cell-5,
+.main>.board>.board-row>.cell.cell-8 {
+  border-right: none;
+}
+
+@media (max-width: 1400px) {
+  .main {
+    padding: 0px 120px;
+  }
+  .main>.info {
+    padding: 20px 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .main {
+    padding: 0px 50px;
+  }
+  .main>.board>.board-row>.cell {
+    padding-top: calc(100% / 6 - 1.7rem);
+    padding-bottom: calc(100% / 6 - 1.7rem);
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+}
