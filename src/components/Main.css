@@ -180,16 +180,16 @@
     padding: 20px 0;
     font-size: 1.2rem;
   }
-}
-
-@media (max-width: 575px) {
-  .main {
-    padding: 0px 50px;
-  }
   .main>.board>.board-row>.cell {
     padding-top: calc(100% / 6 - 1.7rem);
     padding-bottom: calc(100% / 6 - 1.7rem);
     font-size: 3rem;
     line-height: 3.3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .main {
+    padding: 0px 50px;
   }
 }

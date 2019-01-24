@@ -65,19 +65,6 @@
   box-shadow: none;
 }
 
-@media (max-width: 575px) {
-  .header {
-    padding: 20px 0;
-  }
-  .header>h1{
-    font-size: 2rem;
-  }
-  .header>ul>li {
-    border-radius: 3px;
-    margin-top: 10px;
-  }
-}
-
 @media (max-width: 1400px) {
   .header {
     padding: 5px 0 25px;
@@ -91,5 +78,18 @@
   }
   .header>div>button{
     padding: 8px 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    padding: 20px 0;
+  }
+  .header>h1{
+    font-size: 2rem;
+  }
+  .header>ul>li {
+    border-radius: 3px;
+    margin-top: 10px;
   }
 }
