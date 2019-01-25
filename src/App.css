@@ -12,3 +12,9 @@
     margin: 20px auto;
   }
 }
+
+@media (max-width: 575px) {
+  .app {
+    margin-top: 0px;
+  }
+}
